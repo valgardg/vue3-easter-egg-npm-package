@@ -1,8 +1,19 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import EeasterEgg from './components/Eeasteregg.vue'
+import { ref } from 'vue';
+
+const eeasterEggRef = ref<InstanceType<typeof EeasterEgg> | null>(null);
+
+const handleTrigger = () => {
+  console.log("handle trigger");
+  eeasterEggRef.value.triggerEasterEgg();
+}
+
 </script>
 
 <template>
+  <EeasterEgg imageSrc="../../public/IMG_6388.jpg" ref="eeasterEggRef"/>
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -12,6 +23,7 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+  <button @click="handleTrigger">trigger easter egg</button>
 </template>
 
 <style scoped>
