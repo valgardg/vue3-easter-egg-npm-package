@@ -7,5 +7,13 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true, // optional but useful for debugging
+    "emitDeclarationOnly": true,
+    "declarationDir": "dist"
+  },
+  "exclude": ["src/App.vue", "src/main.ts"],
 }

@@ -1,20 +1,32 @@
 {
   "name": "eeasteregg",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "files": ["dist"],
+  "main": "./dist/eeasteregg.umd.cjs",
+  "module": "./dist/eeasteregg.js",
+  "exports": {
+    ".": {
+      "import": "./dist/eeasteregg.js",
+      "require": "./dist/eeasteregg.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "types": "vue-tsc",
     "preview": "vite preview"
   },
   "dependencies": {
     "vue": "^3.4.29"
   },
   "devDependencies": {
+    "@types/node": "^20.14.9",
     "@vitejs/plugin-vue": "^5.0.5",
     "typescript": "^5.2.2",
-    "vite": "^5.3.1",
+    "vite": "^5.3.2",
     "vue-tsc": "^2.0.21"
   }
 }

@@ -9,9 +9,9 @@ export default defineConfig({
     lib: {
       // src/index.ts is where we have exported the component
       entry: resolve(__dirname, "src/index.ts"),
-      name: "EeastereggComponent",
+      name: "Eeasteregg",
       // the name of the output files when the build is run
-      fileName: "eeasteregg-component",
+      fileName: "eeasteregg",
     },
     rollupOptions: {
       // make sure to externalize deps that shoulnd't be bundled
