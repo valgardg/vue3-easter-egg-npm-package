@@ -19,7 +19,7 @@
         if (easterEgg.value) {
           easterEgg.value.classList.remove('peek');
         }
-      }, 2000);
+      }, 2000); // Adjust the timing as needed
     }
   };
   
