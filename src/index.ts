@@ -1,3 +1,6 @@
 import Eeasteregg from "./components/Eeasteregg.vue";
+import { Component } from "vue";
 
-export { Eeasteregg }
+const EeastereggComponent: Component = Eeasteregg;
+
+export { EeastereggComponent }
